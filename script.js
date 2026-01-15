@@ -17,7 +17,13 @@ function createCanvas(count) {
 
         div.classList.add("inner-div");
         container.appendChild(div);
+        checkHover(div);
     }
+}
+
+function checkHover(div) {
+    div.addEventListener("mouseenter", () => div.classList.add("entered"));
+    div.addEventListener("mouseleave", () => div.classList.remove("entered"));
 }
 
 getCount();
