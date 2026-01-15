@@ -27,3 +27,7 @@ input ,button {
 .entered {
     background-color: black;
 }
+
+.wrapper {
+    display: flex;
+}
