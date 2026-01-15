@@ -8,6 +8,9 @@ function getCount() {
         count = input.value;
         input.focus();
         input.value = "";
+        if (count > 100) {
+            return alert("Maximum pixel count: 100!");
+        }
         createCanvas(count);
     });
 }
