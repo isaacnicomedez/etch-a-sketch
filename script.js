@@ -1,21 +1,23 @@
-const input = document.querySelector("input");
-input.addEventListener("keydown", (e) => {
-    if (e.key === "Enter") {
-        const inputValue = input.value;
-        input.focus();
-        input.value = "";
+function handleEvents() {
+    const input = document.querySelector("input");
+    input.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+            const inputValue = input.value;
+            input.focus();
+            input.value = "";
 
-        if (inputValue > 100) return;
-        
-        renderPixels(inputValue);
-    }
-});
+            if (inputValue > 100) return;
+            
+            renderPixels(inputValue);
+        }
+    });
 
-const btnBlack = document.querySelector(".black");
-const btnRainbow = document.querySelector(".rainbow");
+    const btnBlack = document.querySelector(".black");
+    const btnRainbow = document.querySelector(".rainbow");
 
-btnBlack.addEventListener("click", () => handleHover("black"));
-btnRainbow.addEventListener("click", () => handleHover("rainbow"));
+    btnBlack.addEventListener("click", () => handleHover("black"));
+    btnRainbow.addEventListener("click", () => handleHover("rainbow"));
+}
 
 
 
@@ -42,3 +44,5 @@ function handleHover(color) {
         });
     });
 }
+
+handleEvents();
