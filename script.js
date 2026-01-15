@@ -6,13 +6,17 @@ function getCount() {
 
     btn.addEventListener("click", () => {
         count = input.value;
+        input.focus();
+        input.value = "";
         createCanvas(count);
     });
 }
 
 function createCanvas(count) {
+    const container = document.querySelector(".container");
+    container.innerHTML = ""; 
+
     for (let i = 0; i < count; i++) {
-        const container = document.querySelector(".container");
         const div = document.createElement("div");
 
         div.classList.add("inner-div");
