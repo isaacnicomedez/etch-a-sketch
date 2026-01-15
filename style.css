@@ -14,6 +14,7 @@ input ,button {
 
 .container {
     margin: 20px;
+    width: 960px;
     display: flex;
     flex-wrap: wrap;
     border: 1px solid black;
@@ -26,8 +27,4 @@ input ,button {
 
 .entered {
     background-color: black;
-}
-
-.wrapper {
-    display: flex;
 }
