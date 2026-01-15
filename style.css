@@ -1,6 +1,25 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+input ,button {
+    margin: 20px;
+    margin-right: 0px;
+    padding: 8px;
+    font-size: 18px;
+    border-radius: 8px;
+}
+
 .container {
+    margin: 20px;
     width: 100px;
     height: 100px;
-    color: white;
-    background-color: black;
+}
+
+.inner-div {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
 }
