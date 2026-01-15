@@ -44,8 +44,10 @@ input {
 
 .inner-div {
     flex: 1;
+}
 
-    border: 1px solid black;
+.entered {
+    background-color: black;
 }
 
 .footer {

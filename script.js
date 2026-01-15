@@ -4,7 +4,11 @@ input.addEventListener("keydown", (e) => {
         const inputValue = input.value;
         input.focus();
         input.value = "";
+
+        if (inputValue > 100) return;
+        
         renderPixels(inputValue);
+        handleHover();
     }
 })
 
@@ -20,4 +24,12 @@ function renderPixels(count) {
         console.log(div.style.flexBasis);
         container.appendChild(div);
     }
+}
+
+function handleHover() {
+    const divs = document.querySelectorAll(".inner-div");
+
+    divs.forEach(div => {
+        div.addEventListener("mouseenter", (e) => e.target.classList.add("entered"));
+    });
 }
