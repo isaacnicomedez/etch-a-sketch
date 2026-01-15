@@ -8,9 +8,16 @@ input.addEventListener("keydown", (e) => {
         if (inputValue > 100) return;
         
         renderPixels(inputValue);
-        handleHover();
     }
-})
+});
+
+const btnBlack = document.querySelector(".black");
+const btnRainbow = document.querySelector(".rainbow");
+
+btnBlack.addEventListener("click", () => handleHover("black"));
+btnRainbow.addEventListener("click", () => handleHover("rainbow"));
+
+
 
 function renderPixels(count) {
     const container = document.querySelector(".container");
@@ -26,10 +33,12 @@ function renderPixels(count) {
     }
 }
 
-function handleHover() {
+function handleHover(color) {
     const divs = document.querySelectorAll(".inner-div");
-
+    
     divs.forEach(div => {
-        div.addEventListener("mouseenter", (e) => e.target.classList.add("entered"));
+        div.addEventListener("mouseenter", (e) => {
+            e.target.style.backgroundColor = color === "black" ? `rgb(0,0,0)` : `rgb(${Math.floor((Math.random() * 255) + 1)}, ${Math.floor((Math.random() * 255) + 1)}, ${Math.floor((Math.random() * 255) + 1)})`;
+        });
     });
 }
